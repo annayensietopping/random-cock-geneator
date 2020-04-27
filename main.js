@@ -1,8 +1,11 @@
 $(function(){
 // document ready
+$('.hidden-by-default').hide();
 
 $('button').click(
+
 async function newCocktail() {
+  $('.hidden-by-default').show();
   try {
     const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 

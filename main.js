@@ -6,6 +6,7 @@ $('button').click(
 
 async function newCocktail() {
   $('.hidden-by-default').show();
+  $('#ingredients-list').html(" ")
   try {
     const url = "https://www.thecocktaildb.com/api/json/v1/1/random.php"
 
@@ -36,7 +37,7 @@ function updateDrink(response) {
     }
   }
 
-  console.log(ingredients);
+  // console.log(ingredients);
 
   ingredients.forEach((ingredient, measure) => {
     $('#ingredients-list').append(
